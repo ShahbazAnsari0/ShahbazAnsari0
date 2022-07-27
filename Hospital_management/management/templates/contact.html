@@ -1,0 +1,64 @@
+{% extends 'home.html' %}
+{% block title %}Contact{% endblock %}
+{% block body %}
+<form action="{% url 'management:contact' %}" method="POST">
+    {% csrf_token %}
+    {% load static %}
+
+ <div class="apt">
+  <div class="details">
+          <div class="row">
+            <div class="col-right">
+                  <h1>Contact New Lifeline Hospital</h1>
+                  <p>New Lifeline Group’s New Lifeline HealthCity and New Lifeline Hospital are strategically located in the heart of the cities of Mumbai, Maharashtra, and Visakhapatnam, Andhra Pradesh, respectively, and provide residential accommodation to doctors and staff members. It is also an academic and research institute, and a business and convention centre.
+                  </p>
+                   <p><span class="subtitleheading">Connect with Us</span> <br><br>
+    			 	  <span class="blueitalictext">Online customer support and 24x7 emergency care is available to all patients: domestic and international. Contact details, location maps, and directions are mentioned below.</span></p>
+              </div>
+                <div class="col-left">
+						<div class="image"><img src= "{% static 'css/contact-us.jpg' %}"></div>
+              </div>
+      </div>
+  </div>
+              <div class="form2">
+         <div class="row">
+                <div class="col-left2">
+<ul>
+    <li>
+                    <ul>
+                      <li class="clearfix color-seven">Helpline Services
+                        <div class="value color-seven">Helpline Numbers</div>
+                      </li>
+                      <li class="clearfix"><strong>Emergency</strong>
+                        <div class="value">+91 - 22-6767 6766</div>
+                      </li>
+                      <li class="clearfix"><strong>OPD</strong>
+                        <div class="value">+91 - 22-6767 6722</div>
+                      </li>
+                      <li class="clearfix"><strong>Enquiry</strong>
+                        <div class="value">+91 - 22-6767 6767</div>
+                      </li>
+                      <li class="clearfix"><strong>Fax</strong>
+                        <div class="value">+91 - 22-6767 6718</div>
+                      </li>
+                    </ul>
+                  </li>
+                          <div class="text">
+                            <p class="pad0"><strong>New Lifeline Hospital</strong>,<br>
+                             Kanpur<br/>
+                                Uttar Pradesh<br/>
+                              <strong>Contact</strong>: 022-6767 6767<br>
+                              <strong>Email</strong>: <a href="mailto:response@New Lifelinehospital.com" title="response@New Lifelinehospital.com">response@New Lifelinehospital.com</a> <br>
+                              <strong>Location &amp; Directions</strong>: <a href="New Lifeline-mumbai-location.html" title="Location &amp; Directions">New Lifeline Hospital in Mumbai, Maharashtra</a></p>
+                          </div>
+                      </ul>
+                    </div>
+                  <div class="right2">
+<img src= "{% static 'css/contact.png' %}" width="600px" height="400px">
+                  </div>
+                       </div>
+
+        </div>
+      </div>
+    </form>
+{% endblock %}

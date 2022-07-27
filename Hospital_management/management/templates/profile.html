@@ -1,0 +1,10 @@
+{% extends 'home.html' %}
+{% block title %}Profile{% endblock %}
+{% block body %}
+<form action="{% url 'management:profile' %}" method="post">
+    {% csrf_token %}
+
+    <li><a href="{% url 'management:logout' %}">Social-Awareness</a></li>
+
+    </form>
+{% endblock %}

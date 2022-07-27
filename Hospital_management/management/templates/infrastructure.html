@@ -1,0 +1,70 @@
+{% extends 'home.html' %}
+{% block title %}Infrastructure{% endblock %}
+{% block body %}
+<form action="{% url 'management:infrastructure' %}" method="post">
+    {% csrf_token %}
+        {% load static %}
+  <div class="apt">
+  <div class="details">
+          <div class="row">
+            <div class="col-right">
+                  <h4>Infrastructure And Facilities</h4>
+                  <div class="sub-header">Within lies one of Asia’s largest hospitals, offering residential accommodation to its doctors and staff, and facilitating a premier department of emergency medicine and centers of excellence for key super specialties. </div>
+
+                    <p1><span class="subtitleheading">Making Your Care Comfortable</span> <br><br>
+				     <span class="blueitalictext">Built on a sprawling area of 17 acres of land with 2 million sq.ft. of built-up area, we offer an array of medical services, ranging from preventive to curative and consultancy. View the list of infrastructure and facilities which we have to offer.</span></p1>
+            </div>
+              <div class="col-left">
+						<div class="image"><img src= "{% static 'css/infra.jpg' %}" width="600px" height="400px"></div>
+              </div>
+          </div>
+      </div>
+              <div class="form2">
+         <div class="row">
+            <div class="col-left3">
+              <h5>Not Just A Hospital But A HealthCity </h5><br/>
+                <div class="gallery">
+                    <a target="_blank" href="  ">
+                        <img src="{% static 'css/lobby.jpg' %}" width="200" height="150">
+                    </a>
+                    <a target="_blank" href="  ">
+                        <img src="{% static 'css/waiting-area.jpg' %}" width="200" height="150">
+                    </a>
+                    <a target="_blank" href="  ">
+                        <img src="{% static 'css/cafeteria.jpg' %}" width="200" height="150">
+                    </a>
+                    <a target="_blank" href="  ">
+                        <img src="{% static 'css/banking.jpg' %}" width="200" height="150">
+                    </a>
+                    <a target="_blank" href="  ">
+                        <img src="{% static 'css/accident-emergency-center.jpg' %}" width="200" height="150">
+                    </a>
+                    <a target="_blank" href="  ">
+                        <img src="{% static 'css/pharmacy.jpg' %}"  alt="lobby" width="200" height="150">
+                    </a>
+                    <a target="_blank" href="  ">
+                        <img src="{% static 'css/opd-chambers.jpg' %}" width="200" height="150">
+                    </a>
+                    <a target="_blank" href="  ">
+                        <img src="{% static 'css/laboratory.jpg' %}" width="200" height="150">
+                    </a>
+                    <a target="_blank" href="  ">
+                        <img src="{% static 'css/patient rooms.jpg' %}" width="200" height="150">
+                    </a>
+                    <a target="_blank" href="  ">
+                        <img src="{% static 'css/ldrp.jpg' %}" width="200" height="150">
+                    </a>
+                    <a target="_blank" href="  ">
+                        <img src="{% static 'css/nurses-training.jpg' %}" width="200" height="150">
+                    </a>
+                    <a target="_blank" href="  ">
+                        <img src="{% static 'css/other.jpg' %}" width="200" height="150">
+                    </a>
+                </div>
+            </div>
+         </div>
+      </div>
+  </div>
+
+</form>
+{% endblock %}

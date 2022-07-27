@@ -1,0 +1,26 @@
+{% extends 'home.html' %}
+{% block title %}Achievement{% endblock %}
+{% block body %}
+<form action="{% url 'management:achievement' %}" method="post">
+
+ <div class="apt">
+  <div class="details">
+          <div class="row">
+            <div class="col-right">
+                  <h4>Achievements, Awards & Recognitions </h4>
+                  <div class="sub-header">As a premier healthcare facility, New Lifeline Hospital has been recognized for clinical excellence, patient satisfaction, technological innovations, medical advancements and community involvement.</div>
+
+                    <p1><span class="subtitleheading">New Lifeline Hospital</span> <br><br>
+				     <span class="blueitalictext">Within a patient-centered environment, we are focused on continuously elevating our high standards of quality. In fact, some of our quality scores are higher than state, regional and national indicators— even outperforming those of many Magnet® hospitals.</span></p1>
+            </div>
+              <div class="col-left">
+                  {% load static %}
+						<div class="image"><img src= "{% static 'css/Awards.jpg' %}" width="600px" height="400px"></div>
+              </div>
+          </div>
+
+      </div><br/><br/>
+     <center><img src="{% static 'css/cer.jpg' %}" width="600px" height="400px"></center>
+ </div>
+    </form>
+{% endblock %}

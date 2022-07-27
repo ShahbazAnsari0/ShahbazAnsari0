@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport".content="width=device-width,.initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title> New Lifeline - {% block title %} {% endblock %}</title>
+    {% load static  %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    <script src="{% static 'js/script.js' %}" type="text/javascript"></script>
+    {% block script %}{% endblock %}
+
+</head>
+<body>
+
+<!-- nav-bar=1 -->
+  <header>
+      <marquee>As per GOI's circular on price-capping of stents by NPPA (National Pharmaceutical Pricing Authority), new price of coronary stents have been implemented effective 14th Feb, 2017. For details on stent pricing, across our hospitals. CLICK HERE</marquee>
+      <div class="logo"><a href="{% url 'management:home' %}" ><img src= "{% static 'css/logo.png' %}" width="450px" height="90px"></a></div>
+      <div class="s1">
+          <a href="https://goo.gl/maps/s2gXGCSr8F7KLD4g9"><i class="fa fa-map-marker"></i>Kanpur City</a>
+          <a href="mailto:mohdshahbazansari307@gmail.com"><i class="fa fa-envelope"></i>response@New Lifelinehospital.com </a>
+          <a href="tel:+918787063218"><i class="fa fa-phone"></i>8787063218</a>
+      </div>
+   <div class="search">
+      <input type="text4" class="searchTerm" placeholder="Search">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+   </div>
+  </header>
+<!-- nav-bar=2 -->
+ <nav>
+        <nav-bar>
+                <ul>
+                    <li><a href="{% url 'management:home' %}">Home</a></li>
+                    <li class="sub-menu"><a href="about">About us</a>
+                        <ul>
+                            <li><a href="#">Overview</a></li>
+                            <li><a href="{% url 'management:achievement' %}">Achievement</a></li>
+                            <li><a href="{% url 'management:infrastructure' %}">Infrastructure</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu"><a href="cont">Patient Services</a>
+                        <ul>
+                            <li><a href="{% url 'management:login' %}">Login</a></li>
+                            <li><a href="#">Find Doctor</a></li>
+
+                            <li><a href="{% url 'management:appointment' %}">Doctor Appointment</a></li>
+                            <li><a href="#">Checkup packages</a></li>
+                            <li><a href="{% url 'management:visitor' %}">Visitor information</a></li>
+                        </ul>
+                    </li>
+                    </li>
+                    <li class="sub-menu"><a href="about">Contact us</a>
+                        <ul>
+                            <li><a href="{% url 'management:maps' %}">Locate us</a></li>
+                            <li><a href="{% url 'management:contact' %}">Contact</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="sub-menu"><a href="services">Community</a>
+                        <ul>
+                            <li><a href="{% url 'management:login' %}">Social-Awareness</a></li>
+                            <li><a href="about">Emergency services</a></li>
+                            <li><a href="{% url 'management:organ' %}">Organ Donation</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'management:appointment' %}">Doctor Appointment</a>
+                </ul>
+        </nav-bar>
+   </nav>
+
+    {% block body %}
+<div class="slideshow-container" style="display: block; text-align: start; float: none; position: relative; inset: auto; width: 1519px; height: 570px; margin-bottom: 149px; overflow: hidden;top:186px">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+<img src="{% static 'css/kidney-banner.jpg' %}" style="width:1551px">  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+<img src="{% static 'css/cardiac.jpg' %}" style="width:1551px">  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+<img src="{% static 'css/bone-joint-care.jpg' %}"style="width:1550px">  <div class="text">Caption Three</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+       if(document.getElementById('benefits').style.display=='none') {
+            document.getElementById('benefits').style.display='block';
+        }
+        return false;
+
+}
+
+</script>
+
+    {% endblock %}
+<footer>
+<div class="footer">
+  <div class="footer-container">
+      <div class="row">
+            <div class="col-left12">
+              <div class="hospital">THE HOSPITAL</div>
+              <ol>
+                <li> <a href="#" title="About Us">About Us</a> </li>
+                <li> <a href="#" title="Patient Services">Patient Services</a> </li>
+                <li> <a href="#" title="Our Specialities">Our Specialities</a> </li>
+                <li> <a href="#" title="International Patient">International Patient</a> </li>
+                <li> <a href="#" title="Book an Appointment">Book an Appointment</a> </li>
+              </ol>
+            </div>
+          <div class="col-left12">
+                <div class="hospital">PATIENT INFORMATION</div>
+                <ol>
+                  <li><a href="#" title="Hospital Booklets">Hospital Booklets</a></li>
+                  <li> <a href="#" title="Departmental Booklets">Departmental Booklets</a> </li>
+                </ol>
+
+          </div>
+            <div class="col-left12">
+                <div class="hospital">EMPLOYEE CONNECT</div>
+                <ol>
+                  <li> <a href="#" title="Careers">Careers</a> </li>
+                </ol>
+            </div>
+          <div class="col-right11">
+              <div style="font-size: 24px; font-weight: bold; margin-bottom: 10px; padding: 5px;"> <u>New Lifeline</u> Hospital </div>
+              <div class="row">
+                  <ol>
+                      <div style="padding: 5px;">Kanpur</div>
+                      <li>
+                          <div class="col-right12"style="color: #909090;"> New Lifeline Hospital, </div>
+                          <div class="col-right13"style="color: #909090;"> Enquiry :</div>
+                      </li>
+                      <li>
+                          <div class="col-right12"style="color: #909090;"> Kanpur Nagar, </div>
+                          <div class="col-right13"style="color: #909090;"> 000-00000000</div>
+                      </li>
+                      <li>
+                          <div class="col-right12" style="color: #909090;"> Kanpur – 000000 </div>
+                          <div class="col-right13" style="color: #909090;"> <a href="mailto:response@New Lifelinehospital.com" title="Send Email"> response@New Lifelinehospital.com</a> </div>
+                      </li>
+                  </ol>
+              </div>
+              <div class="social-icons">
+              <i class="fa fa-facebook-official" style="padding: 10px;font-size:30px;"></i>
+              <i class="fa fa-instagram" style="padding: 10px;font-size:30px;"></i>
+              <i class="fa fa-twitter" style="padding: 10px;font-size:30px;"></i>
+              <i class="fa fa-google-plus-official" style="padding: 10px;font-size:30px;"></i>
+              <i class="fa fa-pinterest" style="padding: 10px;font-size:30px;"></i>
+              </div>
+          </div>
+      </div>
+      <div class="id01">
+      <div class="copyright_left"> Copyright © - <a href="http://www.New Lifelinehospital.com/" title="New Lifeline Hospital" target="_blank">New Lifeline Hospital. </a> All rights reserved.&nbsp; |&nbsp; <a href="privacy-policy.html" rel="nofollow" title="Privacy Policy">Privacy Policy</a> &nbsp;| &nbsp;<a href="disclaimer.html" title="Disclaimer">Disclaimer</a> &nbsp;|&nbsp; <a href="sitemap.html" title="Sitemap">Sitemap</a> </div>
+      </div>
+  </div>
+</div>
+</footer>
+</body>
+</html>

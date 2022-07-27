@@ -1,0 +1,179 @@
+{% extends 'home.html' %}
+{% block title %}Sign-Up{% endblock %}
+{% block body %}
+<form action="{% url 'management:signup' %}" method="post">
+    {% csrf_token %}
+	<div class="apt">
+           <div class="form-all">
+			   {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+            <h2>
+              Patients Personal details
+            </h2>
+            <div class="form-subHeader">
+              Fill the form below ndicaticating the appointment type you need. We will get back soon to you for more updates.
+            </div>
+			   <form onSubmit = "return checkPassword(this)">
+			<div class="row">
+				<div class="col-25">
+					<label class="label">Full Name
+					<span class="form-required">*</span>
+					</label>
+				</div>
+					<div class="col-75">
+						<input type="text" name="username" placeholder="Enter the Name" required="" />
+					</div>
+			</div>
+	  			<div class="row">
+					<div class="col-25">
+						<label class="label">Gender
+						<span class="form-required">*</span>
+						</label>
+					</div>
+						<div class="col-76">
+							<select name="gender">
+								<option value="">Select</option>
+								<option value="Male">Male</option>
+								<option value="Female"> Female </option>
+							</select>
+						</div>
+							<div class="col-25">
+								<label class="label">D.O.B.
+								<span class="form-required">*</span>
+								</label>
+							</div>
+								<div class="col-76">
+									<input type="date" name="bday">
+								</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label class="label">Phone Number
+						<span class="form-required">*</span>
+						</label>
+					</div>
+						<div class="col-77">
+							<select>
+								<option data-countryCode="GB" value="44" Selected>INDIA (+91)</option>
+							<optgroup label="Other countries">
+								<option data-countryCode="DZ" value="213">Algeria (+213)</option>
+								<option data-countryCode="AD" value="376">Andorra (+376)</option>
+								<option data-countryCode="AO" value="244">Angola (+244)</option>
+								<option data-countryCode="AI" value="1264">Anguilla (+1264)</option>
+								<option data-countryCode="AG" value="1268">Antigua &amp; Barbuda (+1268)</option>
+								<option data-countryCode="AR" value="54">Argentina (+54)</option>
+								<option data-countryCode="AM" value="374">Armenia (+374)</option>
+								<option data-countryCode="AW" value="297">Aruba (+297)</option>
+								<option data-countryCode="AU" value="61">Australia (+61)</option>
+								<option data-countryCode="AT" value="43">Austria (+43)</option>
+								<option data-countryCode="AZ" value="994">Azerbaijan (+994)</option>
+								<option data-countryCode="BS" value="1242">Bahamas (+1242)</option>
+								<option data-countryCode="BY" value="375">Belarus (+375)</option>
+								<option data-countryCode="BE" value="32">Belgium (+32)</option>
+								<option data-countryCode="BZ" value="501">Belize (+501)</option>
+								<option data-countryCode="BJ" value="229">Benin (+229)</option>
+								<option data-countryCode="BM" value="1441">Bermuda (+1441)</option>
+								<option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
+							</optgroup>
+					</select>
+						</div>
+							<div class="col-76">
+								<input type="tel" name="number" placeholder="Number" style="width:250px"required="" />
+							</div>
+
+			</div>
+					<div class="row">
+						<div class="col-25">
+							<label class="label">E-mail
+							</label>
+						</div>
+							<div class="col-75">
+								<input type="text" name="email" placeholder="@gmail.com"/>
+							</div>
+						</div>
+			  				<div class="row">
+								<div class="col-25">
+									<label class="label">Password
+									<span class="form-required">*</span>
+									</label>
+								</div>
+								<div class="col-75">
+									<input type="password" id="password" name="password1" placeholder="Enter Password" required="true"/>
+								</div>
+							</div>
+			  					<div class="row">
+									<div class="col-25">
+										<label class="label">Retype Password
+										<span class="form-required">*</span>
+										</label>
+									</div>
+										<div class="col-75">
+											<input type="password" id="confirm_password" name="password2" placeholder="Retype Password" required="true"/>
+										</div>
+								</div>
+							<div class="row">
+								<div class="col-25">
+									<label class="label">Address
+									<span class="form-required">*</span>
+									</label>
+								</div>
+									<div class="col-75">
+										<textarea id="subject" name="address" placeholder="Write something.." style="height:150px;width:400px" ></textarea>
+									</div>
+							</div>
+								<div class="row">
+					<div class="col-26">
+						<label class="label">State
+						<span class="form-required">*</span>
+						</label>
+					</div>
+						<div class="col-78">
+							<select name="state">
+								<option value="">Select</option>
+								<option value="Uttar Pardesh">Uttar Pardesh</option>
+								<option value="Uttarakhand"> Uttarakhand </option>
+							</select>
+						</div>
+							<div class="col-26">
+								<label class="label">City
+								<span class="form-required">*</span>
+								</label>
+							</div>
+								<div class="col-78">
+									<select name="city">
+								<option value="">Select</option>
+								<option value="Kanpur">Kanpur</option>
+								<option value="Dehli ">Dehli </option>
+							</select>
+								</div>
+								<div class="col-26">
+						<label class="label">Postal / Zip Code
+						<span class="form-required">*</span>
+						</label>
+					</div>
+						<div class="col-78">
+							<input type="tel" name="pin_code" placeholder="Number" style="width:180px" required="" />
+
+						</div>
+				</div>
+					<div class="cond">
+					<p>Have you previously attended our  facility</p>
+						<input type="radio" name="true" value="yes">Yes
+						<input type="radio" name="true" value="no"> No
+							<p>If Yes, state on which condition and when?</p>
+								<textarea  name="subject" placeholder="Write something.." style="height:150px;width:400px" ></textarea>
+					</div>
+                          <div class="signup-btn">
+                				<button class="submit-btn">Submit</button>
+						  </div>
+			   </form>
+		  </div>
+
+	</div>
+</form>
+{% endblock %}

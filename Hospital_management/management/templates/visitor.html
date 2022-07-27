@@ -1,0 +1,124 @@
+{% extends 'home.html' %}
+{% block title %}Visitor{% endblock %}
+{% block body %}
+<form action="{% url 'management:visitor' %}" method="post">
+    {% csrf_token %}
+  <div class="apt">
+  <div class="details">
+          <div class="row">
+            <div class="col-right">
+                  <h4>Healthcare Made Affordable</h4>
+                  <div class="sub-header">The tradition and experience of two and a half decades in delivering affordable healthcare services in a patient-friendly environment with a strong belief in ethics and transparency is now a medical practice at New Lifeline Hospital. We have established ourselves as a comprehensive healthcare system not just in Vishakhapatnam, but in Mumbai as well.
+                  </div>
+
+                    <p1><span class="subtitleheading">Largest Hospital in Asia</span> <br><br>
+				     <span class="blueitalictext">New Lifeline Hospital is one of the largest hospitals in Asia offering quality healthcare at affordable prices. All information you need to know about visiting our hospital is mentioned herein below.</span></p1>
+            </div>
+              <div class="col-left">
+                  {% load static %}
+						<div class="image"><img src= "{% static 'css/visitor.jpg' %}" width="600px" height="400px"></div>
+              </div>
+          </div>
+      </div>
+              <div class="form2">
+         <div class="row">
+            <div class="col-left2">
+              <h5>Visitor Information </h5><br/>
+              <h3>Visiting Hours</h3>
+              <ul class="list">
+                <li  >The hospital visiting hours - Evening - 4.00 pm to 7.00 pm</li>
+                <li  >The ICU visiting hours - Evening - 4.00 pm to 7.00 pm</li>
+                 <li  >Visiting hours on Sundays and Public Holidays - 10.00 am to 1.00 pm</li>
+              </ul>
+
+              <h3 class="box_header">Visitor’s Pass</h3>
+              <ul class="list">
+                <li  >You are requested to collect the Visitor’s and Attendant’s pass from the reception.</li>
+                <li  >Only one visitor pass is issued per patient.</li>
+                <li  >A reliever pass can be collected from the front office desk at the time of admission procedure.</li>
+                <li  >Only one visitor is allowed to visit the ICU.</li>
+                <li  >Children below the age of 12 are not allowed into patients’ rooms.</li>
+              </ul>
+
+                    <h5>Admission</h5>
+                  <ul class="list">
+                       New Lifeline Consultant advises admission; OR</li>
+                       Your personal doctor recommends hospitalization, OR</li>
+                       New Lifeline Casualty Department advises admission.</li>
+                    </ul>
+                    <h5>Admission Procedure</h5>
+                <ul class="list">
+                      <li  >Either the patient or relative must contact the front office staff.</li>
+                      <li  >An admission form will be provided for completion with patient details, and a consent form to be signed for the treatment that will be provided.</li>
+                      <li  >A deposit will have to be paid at the billing counter.</li>
+                      <li  >Once the registration formalities are completed, the patient is escorted to the room.</li>
+                      <li  >Only one attendant is allowed to accompany the patient.</li>
+                      <li  >An attendant’s pass will be issued to the person accompanying the patient. The validity must be renewed, should the patient’s stay be prolonged.</li>
+                </ul>
+
+                  <h5>You Are Requested To Bring The Following Items To The Hospital</h5>
+              <ul class="list">
+                      <li  >All necessary Medical Reports and X-rays</li>
+                      <li  >List of medications currently being taken</li>
+                      <li  >Personal toiletries, slippers, night clothes, and towels as per your need</li>
+              </ul>
+                  <h5>You Are Requested Not To Bring The Following Items To The Hospital</h5>
+              <ul class="list">
+                      <li  >Jewellery and valuables</li>
+                      <li  >Electrical appliances</li>
+                      <li  >Eatables</li>
+                      <li  >Flowers</li>
+              </ul>
+                    <h5>Discharge Procedure</h5>
+              <ul class="list">
+                      <li  >Discharge will be given by the consulting doctor. The ward executive will initiate discharge formalities.</li>
+                      <li  >Billing counters are located on each level, thus ensuring prompt and efficient handling.</li>
+                      <li  >On payment of bill, a folder containing the discharge papers and instructions for future treatment, follow-up visit with the consultant, etc. will be given.</li>
+                      <li  >At the time of discharge Vistor and Attendent pass to be deposited at front desk.</li>
+              </ul>
+                  <h5>Meals and Snacks</h5>
+              <ul class="list">
+                      <li  >Vegetarian meals are hygienically prepared under the supervision of trained personnel.</li>
+                      <li  >Therapeutic diets are carefully planned by our dietetics team.</li>
+              </ul>
+                  <h5>Accommodation for Relatives</h5>
+              <ul class="list">
+                      <li  >Dormitory facility is available on request, for relatives of patients in the ICU.</li>
+                      <li>For Dormitory facility, please contact the reception desk.</li>
+              </ul>
+            </div>
+                <div class="col-right2">
+              <h3 class="box_header"> Picture Gallery </h3>
+                <div class="gallery">
+					<img src= "{% static 'css/background.jpg' %}" width="100" height="60">
+					<img src= "{% static 'css/background.jpg' %}" width="100" height="60">
+					<img src= "{% static 'css/background.jpg' %}" width="100" height="60">
+					<img src= "{% static 'css/background.jpg' %}" width="100" height="60">
+					<img src= "{% static 'css/background.jpg' %}" width="100" height="60">
+					<img src= "{% static 'css/background.jpg' %}" width="100" height="60">
+					<img src= "{% static 'css/background.jpg' %}" width="100" height="60">
+					<img src= "{% static 'css/background.jpg' %}" width="100" height="60">
+					<img src= "{% static 'css/background.jpg' %}" width="100" height="60">
+                </div>
+            <div class="sidebar_box margin_top_10">
+              <h3 class="box_header">Make An Appointment</h3>
+              <p class="info">Book your appointment with our consultants.</p>
+              <ul class="contact_data">
+        <li class=" "> <span class="social_icon phone"></span>
+         <p class="value"> by phone: <strong>+91-8787063218</strong><br> <span style="padding-left: 70px;"><strong>+91-8887604382 </strong></span><br/><span style="padding-left: 70px;"><strong>+91- 7007027687</strong></span><br/><span style="padding-left: 70px;"><strong>+91- 8840913109</strong></span></p>
+        </li>
+        <li class=" "><span class="social_icon mail"></span>
+         <p class="value adjust"> by e-mail: <a href="mailto:mohdhshahbazansari307gmail.com" title="Send Email">mohdhshahbazansari307@gmail.com</a></p>
+        </li>
+       </ul>
+               <div class="l-btn">
+								  <button class="submit-bttn"><a href="">Book Appointment</a></button>
+						  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</form>
+{% endblock %}

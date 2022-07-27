@@ -1,0 +1,179 @@
+{% extends 'home.html' %}
+{% block title %}Appointment{% endblock %}
+{% block body %}
+<form action="{% url 'management:appointment' %}" method="post">
+    {% csrf_token %}
+    <div class="apt">
+      <div class="details">
+          <div class="row">
+            <div class="col-right">
+                  <h4>Online Doctor Appointment</h4>
+                  <div class="sub-header">If you are a patient seeking quality healthcare at affordable prices, then New Lifeline Hospital is the place to be in! Our team of highly qualified and experienced doctors is here to provide to you the best possible healthcare services and medical treatments. You can book an appointment online with our Specialist Consultants. It is simple and quick.
+                  </div>
+
+                    <p1><span class="subtitleheading">Online Doctor Appointment Form</span> <br><br>
+				     <span class="blueitalictext">To make a doctor’s appointment online, please fill the online form below. Our representative will get back to you at the earliest.</span></p1>
+            </div>
+              <div class="col-left">
+				  {% load static %}
+						<div class="image"><img src= "{% static 'css/appointment.jpg' %}" width="600px" height="400px"></div>
+              </div>
+          </div>
+      </div>
+      <div class="form2">
+         <div class="row">
+            <div class="col-left1">
+            <h5>
+              Book A Doctor's Appointment Online
+            </h5>
+              <p1><span>Please fill in the details in the online form below and we will reply to you at the earliest for any appointment requests that are made.</span></p1><br/><br/><br/>
+			<div class="row">
+				<div class="col-1">
+					<label class="label">Name
+					<span class="form-required">*</span>
+					</label>
+				</div>
+					<div class="col-75">
+						<input type="text" name="username" placeholder="Enter the Name" required="" />
+					</div>
+			</div>
+	  			<div class="row">
+					<div class="col-1">
+						<label class="label">Gender
+						<span class="form-required">*</span>
+						</label>
+					</div>
+						<div class="col-76">
+							<select>
+								<option value="">Select</option>
+								<option value="Male">Male</option>
+								<option value="Female"> Female </option>
+							</select>
+						</div>
+				</div>
+				<div class="row">
+					<div class="col-1">
+						<label class="label">Phone Number
+						<span class="form-required">*</span>
+						</label>
+					</div>
+						<div class="col-2">
+							<select>
+								<option>India (+91)</option>
+					</select>
+						</div>
+							<div class="col-76">
+								<input type="tel" name="" placeholder="Number" style="width:250px"required="" />
+							</div>
+				</div>
+					<div class="row">
+						<div class="col-1">
+							<label class="label">E-mail
+							</label>
+						</div>
+							<div class="col-75">
+								<input type="text" name="" placeholder="@gmail.com"/>
+							</div>
+						</div>
+                          <div class="row">
+                            <div class="col-25">
+								<label class="label">Date
+								<span class="form-required">*</span>
+								</label>
+							</div>
+
+								<div class="col-76">
+									<input type="date" name="bday">
+								</div>
+                          </div>
+				<div class="row">
+					<div class="col-1">
+						<label class="label">Preferred Time
+							<span class="form-required">*</span>
+						</label>
+					</div>
+					<div class="col-76">
+							<select>
+								<option value="">Select</option>
+								<option value="Male">Morning</option>
+								<option value="Female"> Evening </option>
+							</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-1">
+						<label class="label">Address
+							<span class="form-required">*</span>
+						</label>
+					</div>
+					<div class="col-75">
+						<textarea id="subject" name="subject" placeholder="Write something.." style="height:150px;width:400px" ></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+						<label class="label">State
+							<span class="form-required">*</span>
+						</label>
+					</div>
+					<div class="col-2">
+						<select name="state">
+							<option value="">Select</option>
+							<option value="Uttar Pardesh">Uttar Pardesh</option>
+							<option value="Uttarakhand"> Uttarakhand </option>
+						</select>
+					</div>
+						<div class="col-26">
+							<label class="label">City
+								<span class="form-required">*</span>
+							</label>
+						</div>
+					<div class="col-78">
+						<select>
+							<option value="">Select</option>
+							<option value="Kanpur">Kanpur</option>
+							<option value="Dehli ">Dehli </option>
+						</select>
+					</div>
+				</div>
+				<label class="label">Message</label>
+					<textarea  name="subject" placeholder="Write something.." style="height:150px;width:400px" ></textarea>
+                <div class="login-btn">
+      				<button class="submit-btn2">Submit</button>
+				</div>
+            </div>
+
+           <div class="col-right2">
+              <h3 class="box_header"> Picture Gallery </h3>
+                <div class="gallery">
+					<img src= "{% static 'css/background.jpg' %}" width="100" height="60">
+					<img src= "{% static 'css/background.jpg' %}" width="100" height="60">
+					<img src= "{% static 'css/background.jpg' %}" width="100" height="60">
+					<img src= "{% static 'css/background.jpg' %}" width="100" height="60">
+					<img src= "{% static 'css/background.jpg' %}" width="100" height="60">
+					<img src= "{% static 'css/background.jpg' %}" width="100" height="60">
+					<img src= "{% static 'css/background.jpg' %}" width="100" height="60">
+					<img src= "{% static 'css/background.jpg' %}" width="100" height="60">
+					<img src= "{% static 'css/background.jpg' %}" width="100" height="60">
+				</div>
+			   <h3 class="box_header">Make An Appointment</h3>
+              <p class="info">Book your appointment with our consultants.</p>
+              <ul class="contact_data">
+        			<li class=" "> <span class="social_icon phone"></span>
+         				<p class="value"> by phone: <strong>+91-8787063218</strong><br> <span style="padding-left: 70px;"><strong>+91-8887604382 </strong></span><br/><span style="padding-left: 70px;"><strong>+91- 7007027687</strong></span><br/><span style="padding-left: 70px;"><strong>+91- 8840913109</strong></span></p>
+        			</li>
+        			<li class=" "><span class="social_icon mail"></span>
+        				<p class="value adjust"> by e-mail: <a href="mailto:mohdhshahbazansari307gmail.com" title="Send Email">mohdhshahbazansari307@gmail.com</a></p>
+        			</li>
+			  </ul>
+			   <div class="l-btn">
+				   <button class="submit-bttn"><a href="">Book Appointment</a></button>
+			   </div>
+
+           </div>
+		 </div>
+
+      </div>
+    </div>
+</form>
+{% endblock %}

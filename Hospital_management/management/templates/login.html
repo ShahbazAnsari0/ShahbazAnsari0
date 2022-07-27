@@ -1,0 +1,42 @@
+{% extends 'home.html' %}
+{% block title %}Login{% endblock %}
+{% block body %}
+<form action="{% url 'management:login' %}" method="POST">
+    {% csrf_token %}
+    <div class="apt">
+    <div class="loginbox">
+     <!--   <h1>Login</h1> -->
+        <div class="content"><img src="https://png.pngtree.com/svg/20161212/f93e57629c.svg" width="80"></div>
+            <p>Username</p>
+        
+                <div class="input-icons">
+                    <i class="fa fa-user-o icon"></i>
+                    <input type="text" name="username" id="username" placeholder="Enter Username" required>
+                </div>
+            <p>Password</p>
+                <div class="input-icons">
+                    <i class="fa fa-lock icon"></i>
+                    <input type="password" name="password1" id="password" placeholder="Enter Password" required="true"/>
+                </div>
+            <div class="text-right">
+                <a href="#">Forgot password?</a>
+            </div>
+            <label class="remember">
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+            <div class="login-btn">
+                <button class="btn">Login</button>
+            </div>
+            <div class="signup">Don't have Patient-ID?<a href="{% url 'management:signup' %}">  Register</a></div>
+    </div>
+    </div>
+    {% if messages %}
+    <div class="message">
+        {% for message in messages %}
+        <h1>{{ message }}</h1>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+</form>
+{% endblock %}

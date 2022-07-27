@@ -1,0 +1,52 @@
+{% extends 'home.html' %}
+{% block title %}Maps{% endblock %}
+{% block body %}
+<form action="{% url 'management:maps' %}" method="post">
+    {% csrf_token %}
+    {% load static %}
+    <div class="apt">
+  <div class="details">
+          <div class="row">
+            <div class="col-right">
+                  <h4>New Lifeline Hospital Location in Kanpur, India </h4>
+                  <div class="sub-header">Within the heart of Mumbai city lies one of Asia’s largest hospitals, along with residential accommodation for its doctors and staff, an academic and research institute, and a business and convention centre. </div>
+
+                    <p1><span class="subtitleheading">Healthcare Landmark :</span> <br><br>
+				     <span class="blueitalictext">A sprawling 17 acres of scenic landscape in the heart of Mumbai is the abode of SevenHills HealthCity. Location advantages:</span></p1>
+            </div>
+              <div class="col-left">
+						<div class="image"><img src= "{% static 'css/location.jpg' %}" width="600px" height="400px"></div>
+              </div>
+          </div>
+      </div>
+
+<div class="form2">
+    <div class="row">
+            <div class="col-left2">
+                <h5>Location and Direction</h5>
+                <div class="gmap_canvas">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228625.11920522113!2d80.1982971432273!3d26.447105411364422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c4770b127c46f%3A0x1778302a9fbe7b41!2sKanpur%2C+Uttar+Pradesh!5e0!3m2!1sen!2sin!4v1564309660986!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></iframe>
+            </div>
+            </div>
+    <div class="col-right2">
+                <h3 class="box_header">Make An Appointment</h3>
+              <p class="info">Book your appointment with our consultants.</p>
+              <ul class="contact_data">
+        <li class=" "> <span class="social_icon phone"></span>
+         <p class="value"> by phone: <strong>+91-8787063218</strong><br> <span style="padding-left: 70px;"><strong>+91-8887604382 </strong></span><br/><span style="padding-left: 70px;"><strong>+91- 7007027687</strong></span><br/><span style="padding-left: 70px;"><strong>+91- 8840913109</strong></span></p>
+        </li>
+        <li class=" "><span class="social_icon mail"></span>
+         <p class="value adjust"> by e-mail: <a href="mailto:mohdhshahbazansari307gmail.com" title="Send Email">mohdhshahbazansari307@gmail.com</a></p>
+        </li>
+        <li class=" ">
+        </li>
+       </ul>
+	                          <div class="l-btn">
+								  <button class="submit-bttn"><a href="">Book Appointment</a></button>
+						  </div>
+              </div>
+    </div>
+</div>
+    </div>
+</form>
+{% endblock %}
