@@ -1,2 +1,1 @@
-Hospital Management System 
-link ansari.pythonanywhere.com
+Mohammad Shahbaz Ansari
